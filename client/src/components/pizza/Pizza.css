@@ -1,0 +1,32 @@
+.pizza {
+  position: relative;
+  left: 10%;
+  width: 80%;
+  top: 50px;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.what_pizza {
+  background-color: inherit;
+  padding-right: 2%;
+  padding-left: 2%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+}
+
+.what_pizza:focus {
+  color: var(--red);
+  background-color: white;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+}
+
+.focus_pizza {
+  color: var(--red);
+  background-color: white;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+}
