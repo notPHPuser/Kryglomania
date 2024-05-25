@@ -64,8 +64,8 @@ function Header() {
           <div className='popup'>
             <h2 className='r_f'>Registration</h2>
 
-            <input className='register_form' type='email' placeholder='email' />
-            <input className='register_form' type='password' placeholder='password' />
+            <input className='register_form' type='email' placeholder='Почта' />
+            <input className='register_form' type='password' placeholder='Пароль' />
 
             <button onClick={handleClosePopup} className='close_button'>
               ❌
