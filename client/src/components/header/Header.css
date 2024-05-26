@@ -112,41 +112,50 @@
   background-color: white;
   width: 30%;
   left: 35%;
-  display: flex;
-  justify-content: center;
+  /* display: flex; */
+  /* justify-content: center; */
   /* align-items: center; */
-  text-align: center;
-  height: 250px;
-  border-radius: 10px;
 
+  /* text-align: center; */
+  height: 220px;
+  border-radius: 10px;
+  top: 50px;
   /* box-shadow: 0px 0px 1000px 0px var(--yellow); */
 }
 
 .popup {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* z-index: 10; */
   width: 100%;
+  border-radius: 10px;
+  background-color: white;
+  height: 220px;
 }
 
 .register_form {
   position: relative;
-  margin-bottom: 20px;
-  left: 15%;
-  top: 50px;
-  width: 70%;
+  /* margin-bottom: 20px; */
+  /* left: 15%; */
+  top: -5px;
+  /* width: 70%; */
   height: 20px;
   border-top: 0;
   border-left: 0;
   border-right: 0;
   border-bottom: 1px solid black;
   outline: none;
+  /* z-index: 10; */
 }
 
 .close_button {
   position: relative;
   width: 5%;
-  top: -110px;
-  left: 90%;
+  top: -88px;
+  left: 40%;
   font-size: 20px;
   background-color: inherit;
   border: none;
@@ -155,17 +164,55 @@
 
 .r_f {
   position: relative;
-  top: 20px;
+  top: -30px;
 }
 
 .submit {
   position: relative;
   width: 40%;
-  left: 30%;
-  top: 40px;
-  height: 20px;
+  /* left: 30%; */
+  top: 30px;
+  height: 25px;
   cursor: pointer;
   background-color: inherit;
   border: 1px solid black;
   border-radius: 2px;
+}
+
+.custom-container {
+  width: 100%;
+  margin-bottom: 16px;
+  border-bottom: none;
+  position: relative;
+  /* left: 13%; */
+}
+
+.react-tel-input .flag-button {
+  display: none;
+}
+
+.custom-input {
+  width: 50%;
+  /* padding: 8px 0; */
+  margin: 0;
+  border: none;
+  border-bottom: none;
+  outline: none;
+  font-weight: 900;
+  position: relative;
+  /* left: -10%; */
+}
+
+.react-tel-input .flag-dropdown {
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 136, 0.5);
+  z-index: -1;
 }

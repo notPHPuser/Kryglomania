@@ -13,6 +13,13 @@ function Pizza() {
         <button className='what_pizza'>Напитки</button>
         <button className='what_pizza'>Соусы</button>
       </div>
+      <div className='pizza_list'>
+        <div className='pizza_example'>q</div>
+        <div className='pizza_example'>w</div>
+        <div className='pizza_example'>e</div>
+        <div className='pizza_example'>r</div>
+        <div className='pizza_example'>z</div>
+      </div>
     </>
   );
 }
