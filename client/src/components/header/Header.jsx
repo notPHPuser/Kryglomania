@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import './Header.css';
 import basket from '../../assets/basket.png';
 import courier from '../../assets/courier.png';
+import Country from '../country/Country';
 
 function Header() {
   const [isButtonActive, setIsButtonActive] = useState(false);
@@ -11,11 +12,29 @@ function Header() {
   const [showPopup, setShowPopup] = useState(false);
   const [showCourier, setShowCourier] = useState(true);
   const [phone, setPhone] = useState('');
+  const [showCountry, setShowCountry] = useState(false);
+  const countryRef = useRef(null);
 
   const handleBasketClick = () => {
     setShowCourier(!showCourier);
   };
 
+  const handleAdressClick = () => {
+    setShowCountry(true);
+  };
+
+  const handleOutsideClick = (event) => {
+    if (countryRef.current && !countryRef.current.contains(event.target)) {
+      setShowCountry(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('click', handleOutsideClick);
+    return () => {
+      document.removeEventListener('click', handleOutsideClick);
+    };
+  }, []);
   const buttonChange = () => {
     setIsButtonActive(!isButtonActive);
     setDeliveryText(isButtonActive ? 'Самовывоз' : 'Доставка');
@@ -38,10 +57,12 @@ function Header() {
         <span className='logo_red'>Кругло</span>
         <span className='logo_yellow'>мания</span>
       </h1>
-      <button className='adress'>
+
+      <button onClick={handleAdressClick} className='adress'>
         <p className='for_adress'>Адрес доставки</p>
         <p className='for_adress new_adress'>Выберете адрес доставки</p>
       </button>
+
       <div className='but'>
         <button
           className={isButtonActive ? 'what_you_want active' : 'what_you_want'}
@@ -89,6 +110,13 @@ function Header() {
             </button>
           </div>
         </form>
+      )}
+      {showCountry && (
+        <>
+          <div className='overlay1'></div>
+
+          <Country />
+        </>
       )}
     </div>
   );

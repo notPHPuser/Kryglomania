@@ -216,3 +216,22 @@
   background-color: rgba(255, 255, 136, 0.5);
   z-index: -1;
 }
+
+.overlay1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 136, 0.5);
+  z-index: 10;
+}
+
+.closeAdress {
+  position: relative;
+  z-index: 11;
+  background-color: inherit;
+  border: none;
+  left: 50%;
+  width: 5%;
+}

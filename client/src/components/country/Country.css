@@ -1,0 +1,8 @@
+.country {
+  width: 50%;
+  height: 400px;
+  background-color: white;
+  z-index: 100;
+  position: relative;
+  left: 25%;
+}
