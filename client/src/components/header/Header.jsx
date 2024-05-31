@@ -23,18 +23,10 @@ function Header() {
     setShowCountry(true);
   };
 
-  const handleOutsideClick = (event) => {
-    if (countryRef.current && !countryRef.current.contains(event.target)) {
-      setShowCountry(false);
-    }
+  const handleAdressClose = () => {
+    setShowCountry(false);
   };
 
-  useEffect(() => {
-    document.addEventListener('click', handleOutsideClick);
-    return () => {
-      document.removeEventListener('click', handleOutsideClick);
-    };
-  }, []);
   const buttonChange = () => {
     setIsButtonActive(!isButtonActive);
     setDeliveryText(isButtonActive ? 'Самовывоз' : 'Доставка');
@@ -113,6 +105,9 @@ function Header() {
       )}
       {showCountry && (
         <>
+          <button className='handleAdressClose' onClick={handleAdressClose}>
+            &#10006;
+          </button>
           <div className='overlay1'></div>
 
           <Country />

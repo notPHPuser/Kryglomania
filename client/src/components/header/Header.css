@@ -235,3 +235,16 @@
   left: 50%;
   width: 5%;
 }
+
+.handleAdressClose {
+  position: relative;
+  z-index: 101;
+  background-color: inherit;
+  top: 60px;
+  border: none;
+  left: 67%;
+  width: 1%;
+  font-size: 20px;
+  height: 25px;
+  cursor: pointer;
+}
