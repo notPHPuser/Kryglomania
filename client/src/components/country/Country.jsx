@@ -1,13 +1,13 @@
 import React from 'react';
 import './Country.css';
-// import YandexMap from './Map/Map';
+import Map from './Map/Map';
 
 function Country() {
   return (
     <>
       <div className='country'>
         <p className='choose_country'>Выберете город</p>
-        {/* <YandexMap /> */}
+        <Map />
       </div>
     </>
   );

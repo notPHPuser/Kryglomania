@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 import ymaps from 'ymaps';
 
-function YandexMap() {
+function Map() {
   useEffect(() => {
-    ymaps.ready(init);
+    ymaps.on('ready', init);
   }, []);
 
   function init() {
@@ -13,7 +13,8 @@ function YandexMap() {
       controls: [], // Удалите элементы управления карты, если необходимо
     });
   }
-  <div id='map' style={{ width: '100%', height: '400px' }}></div>;
+
+  return <div id='map' style={{ width: '100%', height: '400px' }}></div>;
 }
 
-export default YandexMap;
+export default Map;
