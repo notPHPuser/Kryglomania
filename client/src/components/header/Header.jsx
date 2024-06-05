@@ -94,9 +94,6 @@ function Header() {
               hideDropdown={true}
               inputStyle={{ borderTop: 'none', borderLeft: 'none', borderRight: 'none' }}
             />
-            {/* <button onClick={handleClosePopup} className='close_button'>
-              ❌
-            </button> */}
             <button type='submit' className='submit'>
               Зарегестрироваться
             </button>
@@ -109,7 +106,6 @@ function Header() {
             &#10006;
           </button>
           <div className='overlay1'></div>
-
           <Country />
         </>
       )}
