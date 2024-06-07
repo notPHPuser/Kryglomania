@@ -5,6 +5,7 @@ import './Header.css';
 import basket from '../../assets/basket.png';
 import courier from '../../assets/courier.png';
 import Country from '../country/Country';
+import axios from 'axios';
 
 function Header() {
   const [isButtonActive, setIsButtonActive] = useState(false);
@@ -14,6 +15,23 @@ function Header() {
   const [phone, setPhone] = useState('');
   const [showCountry, setShowCountry] = useState(false);
   const countryRef = useRef(null);
+  const [userPhone, setUserPhone] = useState('');
+
+  const addUser = async () => {
+    try {
+      await axios.post('http://localhost:5001/api/user', { phone });
+      setUserPhone('');
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const handleUserPhoneChange = (event) => {
+    if (event && event.target) {
+      const value = event.target.value;
+      setUserPhone(value);
+    }
+  };
 
   const handleBasketClick = () => {
     setShowCourier(!showCourier);
@@ -39,8 +57,9 @@ function Header() {
     setShowPopup(false);
   };
 
-  const handlePhoneChange = (value) => {
-    setPhone(value);
+  const handlePhoneChange = (event) => {
+    const value = event.target.value;
+    setUserPhone(value);
   };
 
   return (
@@ -79,7 +98,7 @@ function Header() {
         Войти
       </button>
       {showPopup && (
-        <form id='popup_container' className='popup_container'>
+        <form onSubmit={addUser} id='popup_container' className='popup_container'>
           <div className='overlay' onClick={handleClosePopup}></div>
           <div id='popup' className='popup'>
             <h2 className='r_f'>Введите телефон</h2>
@@ -87,11 +106,11 @@ function Header() {
             <PhoneInput
               className='register_form'
               country={'ru'}
-              value={phone}
-              onChange={handlePhoneChange}
+              value={userPhone}
               containerClass='custom-container'
               inputClass='custom-input'
               hideDropdown={true}
+              onChange={handleUserPhoneChange}
               inputStyle={{ borderTop: 'none', borderLeft: 'none', borderRight: 'none' }}
             />
             <button type='submit' className='submit'>
