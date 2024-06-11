@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import './Pizza.css';
-import pizza1 from '../../assets/photoPizza/pizza1.png';
+import { PizzaContext } from './PizzaContext';
 
 function Pizza() {
+  const { pizzas } = useContext(PizzaContext);
+  const [selectedPizza, setSelectedPizza] = useState(null);
+
+  const handlePizzaClick = (pizza) => {
+    setSelectedPizza(pizza);
+  };
+
   return (
     <>
       <div className='pizza'>
@@ -15,18 +22,21 @@ function Pizza() {
         <button className='what_pizza'>Соусы</button>
       </div>
       <div className='pizza_list'>
-        <div className='pizza_example'>
-          <img src={pizza1} alt='pizza1' className='photoPizzaExample' />
-          <p className='NamePizzaExample'>Маргарита Гурме</p>
-          <p className='textPizzaExple'>
-            Сыр моцарелла, томаты, соус песто, сыр пармезан, фирменный томатный соус
-          </p>
-        </div>
-        <div className='pizza_example'>w</div>
-        <div className='pizza_example'>e</div>
-        <div className='pizza_example'>r</div>
-        <div className='pizza_example'>z</div>
+        {pizzas.map((pizza) => (
+          <div key={pizza.id} className='pizza_example' onClick={() => handlePizzaClick(pizza)}>
+            <img src={pizza.image} alt={pizza.name} className='photoPizzaExample' />
+            <p className='NamePizzaExample'>{pizza.name}</p>
+            <p className='textPizzaExple'>{pizza.description}</p>
+          </div>
+        ))}
       </div>
+      {selectedPizza && (
+        <div className='selected-pizza'>
+          <img src={selectedPizza.image} alt='pizza' />
+          <h2>{selectedPizza.name}</h2>
+          <p>{selectedPizza.description}</p>
+        </div>
+      )}
     </>
   );
 }
