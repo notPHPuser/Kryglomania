@@ -1,5 +1,6 @@
 import React from 'react';
 import './Pizza.css';
+import pizza1 from '../../assets/photoPizza/pizza1.png';
 
 function Pizza() {
   return (
@@ -14,7 +15,13 @@ function Pizza() {
         <button className='what_pizza'>Соусы</button>
       </div>
       <div className='pizza_list'>
-        <div className='pizza_example'>q</div>
+        <div className='pizza_example'>
+          <img src={pizza1} alt='pizza1' className='photoPizzaExample' />
+          <p className='NamePizzaExample'>Маргарита Гурме</p>
+          <p className='textPizzaExple'>
+            Сыр моцарелла, томаты, соус песто, сыр пармезан, фирменный томатный соус
+          </p>
+        </div>
         <div className='pizza_example'>w</div>
         <div className='pizza_example'>e</div>
         <div className='pizza_example'>r</div>
