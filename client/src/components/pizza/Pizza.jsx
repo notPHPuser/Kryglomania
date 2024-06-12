@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import './Pizza.css';
+import './MediaPizza.css';
 import { PizzaContext } from './PizzaContext';
 
 function Pizza() {
