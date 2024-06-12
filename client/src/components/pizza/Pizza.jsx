@@ -10,6 +10,10 @@ function Pizza() {
     setSelectedPizza(pizza);
   };
 
+  const handleClosePizzaClick = (pizza) => {
+    setSelectedPizza(!pizza);
+  };
+
   return (
     <>
       <div className='pizza'>
@@ -27,15 +31,26 @@ function Pizza() {
             <img src={pizza.image} alt={pizza.name} className='photoPizzaExample' />
             <p className='NamePizzaExample'>{pizza.name}</p>
             <p className='textPizzaExple'>{pizza.description}</p>
+            <p className='pricePizzaExample'>{pizza.price}</p>
+
+            <button className='selectPizzaExample'>Выбрать</button>
+            <p className='newPizzaExample'>{pizza.new}</p>
           </div>
         ))}
       </div>
       {selectedPizza && (
-        <div className='selected-pizza'>
-          <img src={selectedPizza.image} alt='pizza' />
-          <h2>{selectedPizza.name}</h2>
-          <p>{selectedPizza.description}</p>
-        </div>
+        <form>
+          <div className='overlay2'></div>
+
+          <div className='selectedPizza'>
+            <button className='handleClosePizzaClick' onClick={handleClosePizzaClick}>
+              &#10006;
+            </button>
+            <img className='photoPizzaExampleNew' src={selectedPizza.image} alt='pizza' />
+            <h2>{selectedPizza.name}</h2>
+            <p>{selectedPizza.description}</p>
+          </div>
+        </form>
       )}
     </>
   );

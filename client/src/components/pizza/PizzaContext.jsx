@@ -3,6 +3,7 @@ import pizza1 from '../../assets/photoPizza/pizza1.png';
 import pizza2 from '../../assets/photoPizza/pizza2.png';
 import pizza3 from '../../assets/photoPizza/pizza3.png';
 import pizza4 from '../../assets/photoPizza/pizza4.png';
+import pizza5 from '../../assets/photoPizza/pizza5.png';
 
 export const PizzaContext = createContext();
 
@@ -11,8 +12,10 @@ export const PizzaProvider = ({ children }) => {
     {
       id: 1,
       name: 'Маргарита Гурме',
-      description: 'Сыр моцарелла, томаты, соус песто, сыр пармезан, фирменный томатный соус',
+      description:
+        'Сыр моцарелла, томаты, соус песто, сыр пармезан, фирменный ароматный томатный соус',
       image: pizza1,
+      price: 'от 359',
     },
     {
       id: 2,
@@ -20,12 +23,14 @@ export const PizzaProvider = ({ children }) => {
       description:
         'Бекон, сыр моцарелла, сливочный соус, сыр пармезан, чипсы из бекона, рубленная петрушка',
       image: pizza2,
+      price: 'от 569',
     },
     {
       id: 3,
       name: '4 сыра',
       description: 'Сыр моцарелла, сыр чеддер, сыр блю чиз, сыр пармезан, фирменный сливочный соус',
       image: pizza3,
+      price: 'от 679',
     },
     {
       id: 4,
@@ -33,6 +38,16 @@ export const PizzaProvider = ({ children }) => {
       description:
         'Ветчина, бекон, курица, перец соломка, красный лук, соус барбекю, сыр моцарелла, томатный соус',
       image: pizza4,
+      price: 'от 569',
+      new: 'Новинка',
+    },
+    {
+      id: 5,
+      name: 'Чизбургер',
+      description:
+        'Говяжий фарш, сыр моцарелла, огурцы маринованные, красный лук, томатный кетчуп, сырный соус, горчичный соус',
+      image: pizza5,
+      price: 'от 679',
     },
   ]);
 
