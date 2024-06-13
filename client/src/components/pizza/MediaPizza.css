@@ -1,7 +1,13 @@
 /* неправильно */
 
-@media (max-width: 2353px) {
+@media (min-width: 1520px) {
   .newPizzaExample {
     top: -41vh;
+  }
+}
+
+@media (max-width: 1720px) {
+  .newPizzaExample {
+    top: -50vh;
   }
 }
