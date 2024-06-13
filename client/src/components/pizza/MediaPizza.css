@@ -1,13 +1,23 @@
-/* неправильно */
-
 @media (min-width: 1520px) {
   .newPizzaExample {
     top: -41vh;
+  }
+  .pizza_example {
+    height: 480px;
+  }
+  .pricePizzaExample {
+    top: 8.9vh;
   }
 }
 
 @media (max-width: 1720px) {
   .newPizzaExample {
     top: -50vh;
+  }
+  .pizza_example {
+    height: 440px;
+  }
+  .pricePizzaExample {
+    top: 10vh;
   }
 }

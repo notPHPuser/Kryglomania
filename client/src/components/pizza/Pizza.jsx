@@ -15,11 +15,25 @@ function Pizza() {
     setSelectedPizza(!pizza);
   };
 
+  const handlePizzaScroll = () => {
+    const pizzaExample = document.querySelector('.pizza_example');
+    pizzaExample.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleOftenScroll = () => {
+    const pizzaExample = document.querySelector('.often');
+    pizzaExample.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <>
       <div className='pizza'>
-        <button className='what_pizza'>Пицца</button>
-        <button className='what_pizza'>Часто заказывают</button>
+        <button className='what_pizza' onClick={handlePizzaScroll}>
+          Пицца
+        </button>
+        <button className='what_pizza' onClick={handleOftenScroll}>
+          Часто заказывают
+        </button>
         <button className='what_pizza'>Акции</button>
         <button className='what_pizza'>Закуски</button>
         <button className='what_pizza'>Сэндвичи</button>

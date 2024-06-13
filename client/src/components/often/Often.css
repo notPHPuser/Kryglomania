@@ -1,0 +1,11 @@
+.often {
+  width: 100%;
+  position: relative;
+  top: 17vh;
+  text-align: center;
+}
+
+.oftenText {
+  font-weight: 800;
+  font-size: 23px;
+}
