@@ -6,8 +6,11 @@ import { PizzaContext } from './PizzaContext';
 function Pizza() {
   const { pizzas } = useContext(PizzaContext);
   const [selectedPizza, setSelectedPizza] = useState(null);
+  const [selectedLiOfPizza, setSelectedLiOfPizza] = useState(null);
 
-  const [isPizzaSelected, setIsPizzaSelected] = useState(false);
+  const handleLiOfPizzaClick = (index) => {
+    setSelectedLiOfPizza(index);
+  };
 
   const handlePizzaClick = (pizza) => {
     setSelectedPizza(pizza);
@@ -68,9 +71,15 @@ function Pizza() {
               <h2 className='selectedPizzaName'>{selectedPizza.name}</h2>
               <p className='selectedPizzaDescription'>{selectedPizza.description}</p>
               <ul className='ulOfPizza'>
-                <li className='liOfPizza'>Оригинальное</li>
-                <li className='liOfPizza'>Тонкое</li>
-                <li className='liOfPizza'>Римское</li>
+                {['Оригинальное', 'Тонкое', 'Римское'].map((item, index) => (
+                  <li
+                    key={index}
+                    className={`liOfPizza ${selectedLiOfPizza === index ? 'active' : ''}`}
+                    onClick={() => handleLiOfPizzaClick(index)}
+                  >
+                    {item}
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
