@@ -156,6 +156,7 @@
   left: 20%;
   top: -45vh;
   text-align: center;
+  width: 60%;
   /* height: 500px; */
 }
 
@@ -212,6 +213,7 @@
   cursor: pointer;
   font-size: 14px;
   position: relative;
+  user-select: none;
 }
 
 .liOfPizza.active {
