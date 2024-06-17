@@ -33,13 +33,13 @@ function Pizza() {
   return (
     <>
       <div className='pizza'>
-        <button className='what_pizza' onClick={handlePizzaScroll}>
+        <button className='what_pizza marginForSE' onClick={handlePizzaScroll}>
           Пицца
         </button>
-        <button className='what_pizza' onClick={handleOftenScroll}>
+        <button className='what_pizza marginForSE' onClick={handleOftenScroll}>
           Часто заказывают
         </button>
-        <button className='what_pizza'>Акции</button>
+        <button className='what_pizza marginForSE'>Акции</button>
         <button className='what_pizza'>Закуски</button>
         <button className='what_pizza'>Сэндвичи</button>
         <button className='what_pizza'>Напитки</button>

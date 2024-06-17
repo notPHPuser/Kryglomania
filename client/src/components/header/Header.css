@@ -65,7 +65,9 @@
 .what_you_want.active {
   background-color: var(--yellow);
 }
-
+/* .hiddenSE {
+  display: block;
+} */
 .basket {
   position: relative;
   /* width: 20%; */

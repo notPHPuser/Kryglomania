@@ -21,3 +21,17 @@
     top: 8.4vh;
   }
 }
+
+@media (max-width: 375px) {
+  .pizza {
+    position: relative;
+    width: 70%;
+    left: 15%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .marginForSE {
+    margin-bottom: 10px;
+  }
+}

@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import './Header.css';
+import './MediaHeader.css';
 import basket from '../../assets/basket.png';
 import courier from '../../assets/courier.png';
 import Country from '../country/Country';
@@ -70,7 +71,7 @@ function Header() {
       </h1>
 
       <button onClick={handleAdressClick} className='adress'>
-        <p className='for_adress'>Адрес доставки</p>
+        <p className='for_adress hiddenSE'>Адрес доставки</p>
         <p className='for_adress new_adress'>Выберете адрес доставки</p>
       </button>
 

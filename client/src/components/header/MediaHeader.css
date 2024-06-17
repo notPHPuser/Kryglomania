@@ -1,0 +1,57 @@
+@media (max-width: 375px) {
+  .logo_red {
+    font-size: 18px;
+    position: relative;
+    left: -100%;
+  }
+  .logo_yellow {
+    font-size: 18px;
+    position: relative;
+    left: -100%;
+  }
+  .header {
+    width: 100%;
+  }
+  .adress {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 46%;
+    align-items: center;
+  }
+  .for_adress {
+    font-size: 10px;
+  }
+  .what_you_want {
+    position: relative;
+    left: -100%;
+    width: 150%;
+  }
+  .basket {
+    position: relative;
+    left: 20%;
+    display: none;
+  }
+  .basket.active {
+    left: 20%;
+  }
+  .or_or {
+    position: relative;
+    left: 0%;
+    top: 0px;
+    font-size: 10px;
+    background-color: inherit;
+  }
+  .or_or.active {
+    transform: translateX(0%);
+  }
+  .hiddenSE {
+    display: none;
+  }
+  .enter {
+    position: relative;
+    font-size: 10px;
+    left: 81%;
+    width: 15%;
+  }
+}
