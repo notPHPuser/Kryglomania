@@ -7,6 +7,8 @@ function Pizza() {
   const { pizzas } = useContext(PizzaContext);
   const [selectedPizza, setSelectedPizza] = useState(null);
 
+  const [isPizzaSelected, setIsPizzaSelected] = useState(false);
+
   const handlePizzaClick = (pizza) => {
     setSelectedPizza(pizza);
   };
@@ -62,8 +64,15 @@ function Pizza() {
               &#10006;
             </button>
             <img className='photoPizzaExampleNew' src={selectedPizza.image} alt='pizza' />
-            <h2>{selectedPizza.name}</h2>
-            <p>{selectedPizza.description}</p>
+            <div className='selectedPizzaInfo'>
+              <h2 className='selectedPizzaName'>{selectedPizza.name}</h2>
+              <p className='selectedPizzaDescription'>{selectedPizza.description}</p>
+              <ul className='ulOfPizza'>
+                <li className='liOfPizza'>Оригинальное</li>
+                <li className='liOfPizza'>Тонкое</li>
+                <li className='liOfPizza'>Римское</li>
+              </ul>
+            </div>
           </div>
         </form>
       )}

@@ -1,6 +1,6 @@
 @media (min-width: 1520px) {
   .newPizzaExample {
-    top: -41vh;
+    top: -41.5vh;
   }
   .pizza_example {
     height: 480px;
@@ -12,12 +12,12 @@
 
 @media (max-width: 1720px) {
   .newPizzaExample {
-    top: -50vh;
+    top: -34.5vh;
   }
   .pizza_example {
-    height: 440px;
+    height: 470px;
   }
   .pricePizzaExample {
-    top: 10vh;
+    top: 8.4vh;
   }
 }
