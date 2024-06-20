@@ -142,7 +142,7 @@
 
 .newPizzaExample {
   position: relative;
-  top: -50vh;
+  top: 0px;
   left: 65%;
   background-color: var(--red);
   color: white;
@@ -168,8 +168,9 @@
 
 .selectedPizzaName {
   position: relative;
-  left: 5%;
+  left: 40%;
   top: -2vh;
+  width: 30%;
 }
 
 .handleClosePizzaClick {
@@ -179,7 +180,7 @@
   font-size: 25px;
   width: 3%;
   left: 47%;
-  top: 3.5vh;
+  top: 55px;
   border-radius: 10px;
   cursor: pointer;
 }
