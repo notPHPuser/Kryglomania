@@ -17,15 +17,20 @@ function Header() {
   const [showCountry, setShowCountry] = useState(false);
   const countryRef = useRef(null);
   const [userPhone, setUserPhone] = useState('');
+  const [isLogin, setIsLogin] = useState(false);
 
-  const addUser = async () => {
-    try {
-      await axios.post('http://localhost:5001/api/user', { phone });
-      setUserPhone('');
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  function setLogin() {
+    setIsLogin(true);
+  }
+
+  // const addUser = async () => {
+  //   try {
+  //     await axios.post('http://localhost:5001/api/user', { phone });
+  //     setUserPhone('');
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // };
 
   const handleUserPhoneChange = (event) => {
     if (event && event.target) {
@@ -96,10 +101,11 @@ function Header() {
         </button>
       </div>
       <button onClick={handleEnterClick} className='enter'>
-        Войти
+        {isLogin ? 'Регистрация' : 'Войти'}
       </button>
+
       {showPopup && (
-        <form onSubmit={addUser} id='popup_container' className='popup_container'>
+        <form id='popup_container' className='popup_container'>
           <div className='overlay' onClick={handleClosePopup}></div>
           <div id='popup' className='popup'>
             <h2 className='r_f'>Введите телефон</h2>
@@ -114,7 +120,7 @@ function Header() {
               onChange={handleUserPhoneChange}
               inputStyle={{ borderTop: 'none', borderLeft: 'none', borderRight: 'none' }}
             />
-            <button type='submit' className='submit'>
+            <button onClick={setLogin} type='submit' className='submit'>
               Зарегестрироваться
             </button>
           </div>

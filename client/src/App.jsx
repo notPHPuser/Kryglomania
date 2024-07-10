@@ -3,7 +3,7 @@ import Header from './components/header/Header';
 import Main from './components/main/Main';
 import Often from './components/often/Often';
 import Pizza from './components/pizza/Pizza';
-import { PizzaProvider } from './components/pizza/PizzaContext';
+import { PizzaProvider } from './context/PizzaContext';
 
 function App() {
   return (

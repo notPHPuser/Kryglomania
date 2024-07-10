@@ -1,12 +1,12 @@
 import React, { createContext, useState } from 'react';
-import pizza1 from '../../assets/photoPizza/pizza1.png';
-import pizza2 from '../../assets/photoPizza/pizza2.png';
-import pizza3 from '../../assets/photoPizza/pizza3.png';
-import pizza4 from '../../assets/photoPizza/pizza4.png';
-import pizza5 from '../../assets/photoPizza/pizza5.png';
-import pizza6 from '../../assets/photoPizza/pizza6.png';
-import pizza7 from '../../assets/photoPizza/pizza7.png';
-import pizza8 from '../../assets/photoPizza/pizza8.png';
+import pizza1 from '../assets/photoPizza/pizza1.png';
+import pizza2 from '../assets/photoPizza/pizza2.png';
+import pizza3 from '../assets/photoPizza/pizza3.png';
+import pizza4 from '../assets/photoPizza/pizza4.png';
+import pizza5 from '../assets/photoPizza/pizza5.png';
+import pizza6 from '../assets/photoPizza/pizza6.png';
+import pizza7 from '../assets/photoPizza/pizza7.png';
+import pizza8 from '../assets/photoPizza/pizza8.png';
 
 export const PizzaContext = createContext();
 
@@ -54,7 +54,7 @@ export const PizzaProvider = ({ children }) => {
     },
     {
       id: 6,
-      name: 'Пепперони Ранч',
+      name: 'Пепперони',
       description: 'Пепперони, сыр моцарелла, перец соломка, сливочно-чесночный соус',
       image: pizza6,
       price: 'от 429₽',
@@ -75,5 +75,11 @@ export const PizzaProvider = ({ children }) => {
     },
   ]);
 
-  return <PizzaContext.Provider value={{ pizzas, setPizzas }}>{children}</PizzaContext.Provider>;
+  const [often, setOften] = useState([]);
+
+  return (
+    <PizzaContext.Provider value={{ pizzas, setPizzas, often, setOften }}>
+      {children}
+    </PizzaContext.Provider>
+  );
 };
