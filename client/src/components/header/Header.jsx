@@ -23,15 +23,6 @@ function Header() {
     setIsLogin(true);
   }
 
-  // const addUser = async () => {
-  //   try {
-  //     await axios.post('http://localhost:5001/api/user', { phone });
-  //     setUserPhone('');
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // };
-
   const handleUserPhoneChange = (event) => {
     if (event && event.target) {
       const value = event.target.value;

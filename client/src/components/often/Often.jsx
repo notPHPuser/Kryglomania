@@ -12,7 +12,7 @@ function Often() {
         {often.map((pizza) => (
           <div
             key={often.id}
-            className='pizza_example'
+            className='often_example'
             onClick={() => handlePizzaClick(pizza)}
           ></div>
         ))}

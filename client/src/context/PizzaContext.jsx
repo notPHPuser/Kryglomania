@@ -75,7 +75,40 @@ export const PizzaProvider = ({ children }) => {
     },
   ]);
 
-  const [often, setOften] = useState([]);
+  const [often, setOften] = useState([
+    {
+      id: 1,
+      name: 'Маргарита Гурме',
+      description:
+        'Сыр моцарелла, томаты, соус песто, сыр пармезан, фирменный ароматный томатный соус',
+      image: pizza1,
+      price: 'от 359₽',
+    },
+    {
+      id: 1,
+      name: 'Маргарита Гурме',
+      description:
+        'Сыр моцарелла, томаты, соус песто, сыр пармезан, фирменный ароматный томатный соус',
+      image: pizza1,
+      price: 'от 359₽',
+    },
+    {
+      id: 1,
+      name: 'Маргарита Гурме',
+      description:
+        'Сыр моцарелла, томаты, соус песто, сыр пармезан, фирменный ароматный томатный соус',
+      image: pizza1,
+      price: 'от 359₽',
+    },
+    {
+      id: 1,
+      name: 'Маргарита Гурме',
+      description:
+        'Сыр моцарелла, томаты, соус песто, сыр пармезан, фирменный ароматный томатный соус',
+      image: pizza1,
+      price: 'от 359₽',
+    },
+  ]);
 
   return (
     <PizzaContext.Provider value={{ pizzas, setPizzas, often, setOften }}>
