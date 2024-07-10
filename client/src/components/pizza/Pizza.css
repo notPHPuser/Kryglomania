@@ -170,7 +170,8 @@
   position: relative;
   left: 40%;
   top: -2vh;
-  width: 30%;
+  width: 33%;
+  word-break: break-all;
 }
 
 .handleClosePizzaClick {
@@ -180,7 +181,7 @@
   font-size: 25px;
   width: 3%;
   left: 47%;
-  top: 55px;
+  top: 40px;
   border-radius: 10px;
   cursor: pointer;
 }
