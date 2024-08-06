@@ -6,7 +6,6 @@ import './MediaHeader.css';
 import basket from '../../assets/basket.png';
 import courier from '../../assets/courier.png';
 import Country from '../country/Country';
-import axios from 'axios';
 
 function Header() {
   const [isButtonActive, setIsButtonActive] = useState(false);
